@@ -13,4 +13,8 @@ const MainComponent = () => {
 // memoized component
 const ChildComponent = memo(({ makeLog }) => (
     <button onClick={makeLog}>say Hi from ChildComponent</button>
-));
+), (prevProps, nextProps) => {
+    return prevProps !== nextProps;
+  } );
+
+// https://codesandbox.io/s/task-2-forked-3r2li0
