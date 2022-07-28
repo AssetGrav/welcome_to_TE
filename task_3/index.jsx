@@ -15,4 +15,8 @@ const ChildComponent = memo(({ user: { name, age } }) => {
     return (
         <div>user name: {name}, user age: {age}</div>
     )
-});
+}, (prevProps, nextProps) => {
+    return prevProps !== nextProps;
+  });
+
+//  https://codesandbox.io/s/task-3-forked-qowj3v
