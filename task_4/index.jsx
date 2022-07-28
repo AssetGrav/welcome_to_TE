@@ -26,3 +26,6 @@ class ChildComponent extends Component {
         );
     }
 };
+
+// Function components cannot be given refs.
+// https://codesandbox.io/s/task-4-forked-y6swd7?file=/src/taskComponents.jsx
